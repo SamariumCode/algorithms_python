@@ -5,8 +5,11 @@ def caesar_cipher(txt, shift):
     
     for item in txt:
         if item in ascii_letters:
-            new_index = (ascii_letters.index(item) + shift) % len(ascii_letters)
-            result.append(ascii_letters[new_index])
+            for i, letter in enumerate(ascii_letters):
+                if item == letter:
+                    new_index = (i + shift) % len(ascii_letters)
+                    result.append(ascii_letters[new_index])
+                    break
         else:
             result.append(item)
     
