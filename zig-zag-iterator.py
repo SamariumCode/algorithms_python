@@ -1,19 +1,19 @@
 def zig_zag_iterator(nums1, nums2):
     """
-    Alternates between elements of two lists (odd_nums and even_nums) and 
+    Alternates between elements of two lists (nums1 and nums2) and 
     returns a new list where elements are taken from both lists in a zigzag pattern.
 
     The function first adds elements from both lists alternately (first from 
-    odd_nums, then from even_nums) until one list is exhausted. Then, it adds 
-    the remaining elements of the longer list to the result.
+    nums1, then from nums2) until one list is exhausted. Then, it appends 
+    the remaining elements from the longer list to the result.
 
     Parameters:
-    odd_nums (list): A list of integers representing odd numbers.
-    even_nums (list): A list of integers representing even numbers.
+    nums1 (list): A list of integers.
+    nums2 (list): A list of integers.
 
     Returns:
     list: A list containing the elements from both input lists in a zigzag order, 
-          starting with an element from odd_nums, followed by an element from even_nums.
+          starting with an element from nums1, followed by an element from nums2.
 
     Example:
     >>> zig_zag_iterator([1, 3, 5, 7, 9], [2, 4, 6, 8, 10])
@@ -21,9 +21,10 @@ def zig_zag_iterator(nums1, nums2):
 
     Note:
     The function handles cases where the input lists have different lengths. 
-    Remaining elements from the longer list are appended after alternating 
+    The remaining elements from the longer list are appended after alternating 
     between the two lists.
     """
+
     result = []
     min_len = min(len(nums1), len(nums2))
 
