@@ -28,4 +28,4 @@ This repository contains Python implementations of various algorithms, ranging f
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/repository-name.git
+   git@github.com:SamariumCode/algorithms_python.git
